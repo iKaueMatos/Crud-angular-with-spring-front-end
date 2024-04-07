@@ -1,6 +1,9 @@
 ## CRUD em AngularJS com Spring Boot
 Neste projeto, você encontrará um exemplo básico de um aplicativo CRUD (Create, Read, Update, Delete) desenvolvido usando AngularJS no frontend e Spring Boot no backend.
 
+## Tecnologias utilizadas:
+[![My Skills](https://skillicons.dev/icons?i=angular,materialui,spring)](https://skillicons.dev)
+
 ## Front-end (AngularJS)
 
 ### Como executar a aplicação ?
