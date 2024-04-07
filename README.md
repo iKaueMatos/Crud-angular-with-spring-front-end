@@ -1,27 +1,84 @@
-# Angular + spring boot
+## CRUD em AngularJS com Spring Boot
+Neste projeto, você encontrará um exemplo básico de um aplicativo CRUD (Create, Read, Update, Delete) desenvolvido usando AngularJS no frontend e Spring Boot no backend.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+## Backend (Spring Boot)
+O backend é construído utilizando Spring Boot para fornecer uma API RESTful para manipulação dos dados.
 
-## Development server
+## Setup
+Certifique-se de ter o Java JDK e o Maven instalados.
+Clone o repositório.
+Navegue até o diretório do backend.
+Execute o seguinte comando para iniciar o servidor Spring Boot:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+mvn spring-boot:run
+```
 
-## Code scaffolding
+## Endpoints da API
+Listagem de Todos os Cursos:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Método: GET
+URL: http://localhost:8080/api/courses
+Listagem de Cursos com Paginação:
 
-## Build
+### Método: GET
+URL: http://localhost:8080/api/courses?page=0&pageSize=100
+Detalhes de um Curso Específico:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Método: GET
+URL: http://localhost:8080/api/courses/{id}
+Adição de um Novo Curso:
 
-## Running unit tests
+### Método: POST
+URL: http://localhost:8080/api/courses
+Corpo da Requisição (formato JSON):
+```json
+{
+    "name": "Angular",
+    "category": "Front-end",
+    "lessons": [
+        {
+          "name": "Introdução",
+          "youtubeUrl": "tPOMG0D57S0"
+        },
+        {
+          "name": "Introdução2",
+          "youtubeUrl": "tPOMG0D57S0"
+        }
+    ]
+}
+```
+### Atualização de um Curso Existente:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Método: PUT
+URL: http://localhost:8080/api/courses/{id}
+Corpo da Requisição (formato JSON):
+```json
+{
+    "name": "Angular com Spring",
+    "category": "Back-end",
+    "lessons": [
+      {
+        "id": 1,
+        "name": "Introdução11111",
+        "youtubeUrl": "01234567890"
+      },
+      {
+        "id": 2,
+        "name": "Angular11111",
+        "youtubeUrl": "01234567891"
+      }
+    ]
+}
+```
+### Remoção de um Curso Existente:
 
-## Running end-to-end tests
+Método: DELETE
+URL: http://localhost:8080/api/courses/{id}
+Substitua {id} pelo ID do curso específico que você deseja manipular.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Frontend (AngularJS)
+O frontend é construído utilizando AngularJS para interagir com o backend e fornecer uma interface de usuário para o usuário final. Consulte o README do frontend para mais informações sobre como configurar e executar o frontend.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contribuindo
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue para relatar problemas ou enviar um pull request com melhorias.
