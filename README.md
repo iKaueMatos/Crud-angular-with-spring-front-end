@@ -24,8 +24,6 @@ ou
 ```bash
 ng serve
 ```
-
-## Frontend (AngularJS)
 O frontend é construído utilizando AngularJS para interagir com o backend e fornecer uma interface de usuário para o usuário final. Consulte o README do frontend para mais informações sobre como configurar e executar o frontend.
 
 ## Contribuindo
